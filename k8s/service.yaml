@@ -1,0 +1,16 @@
+---
+# https://kubernetes.io/docs/concepts/services-networking/service/#multi-port-services
+apiVersion: v1
+kind: Service
+metadata:
+  name: todo-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: nginx
+  ports:
+  - name: todo-service
+    protocol: TCP
+    port: 80
+    targetPort: 8080
+    nodePort: 30008

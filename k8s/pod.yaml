@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeapp
+spec:
+   containers:
+   - name: nodeapp
+     image: dockerandkubernetes/kubernetes:latest
+     ports:
+     - containerPort: 8080
+
+
