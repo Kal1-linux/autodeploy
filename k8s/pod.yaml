@@ -3,16 +3,17 @@ kind: Pod
 metadata:
   name: nodeapp
 spec:
-   containers:
-   - name: nodeapp
-     image: dockerandkubernetes/kubernetes:latest
-     ports:
-     - containerPort: 8080
-    livenessProbe:
-      httpGet:
-        path: /
-        port: 8080
-      initialDelaySeconds: 3
-      periodSeconds: 5
+  containers:
+  - name: nodeapp
+    image: dockerandkubernetes/kubernetes:latest
+    ports:
+    - containerPort: 8080
+  livenessProbe:
+    httpGet:
+      path: /
+      port: 8080
+    initialDelaySeconds: 3
+    periodSeconds: 5
+
 
 
